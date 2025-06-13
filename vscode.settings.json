@@ -1,0 +1,107 @@
+{
+  // =================================================================
+  // TAMPILAN & TEMA (Appearance & Theme)
+  // =================================================================
+  "workbench.colorTheme": "One Dark Pro Darker", // Tema warna yang Anda suka
+  "workbench.iconTheme": "material-icon-theme", // Ikon untuk file explorer
+  "editor.fontFamily": "Fira Code, Cascadia Code, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true, // Mengaktifkan ligatur seperti '=>', '!=', '==='
+  "editor.fontSize": 12,
+  "editor.lineHeight": 24,
+  "editor.wordWrap": "on", // Otomatis wrap baris yang panjang
+
+  // =================================================================
+  // PENGATURAN AUTO SAVE (Auto Save Settings)
+  // =================================================================
+  "files.autoSave": "afterDelay", // Menggunakan metode delay
+  "files.autoSaveDelay": 1000, // Simpan setelah 1 detik tidak aktif mengetik
+
+  // =================================================================
+  // KUALITAS KODE & FORMATTING (Code Quality & Formatting)
+  // Ini adalah pengaturan editor global yang akan berlaku untuk SEMUA file
+  // kecuali ditimpa oleh pengaturan spesifik bahasa atau workspace.
+  // =================================================================
+  "editor.formatOnSave": true, // Otomatis format kode setiap kali menyimpan
+  "files.trimTrailingWhitespace": true, // Hapus spasi kosong di akhir baris
+  "files.insertFinalNewline": true, // Selalu tambahkan baris baru di akhir file
+  "editor.tabSize": 2, // Ukuran tab default untuk semua bahasa
+  "editor.insertSpaces": true, // Menggunakan spasi alih-alih tab karakter
+  "editor.detectIndentation": false, // Nonaktifkan deteksi indentasi otomatis oleh VS Code
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier sebagai formatter default global
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // Mengaktifkan auto-fix ESLint saat menyimpan
+  },
+
+  // =================================================================
+  // PENGATURAN SPESIFIK BAHASA (Language Specific Settings)
+  // Ini akan menimpa pengaturan global di atas jika bahasa cocok.
+  // =================================================================
+
+  // Pengaturan untuk JavaScript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Pengaturan untuk JavaScript React (JSX)
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // Anda tidak perlu lagi "editor.tabSize" dan "editor.insertSpaces" di sini
+    // kecuali Anda ingin nilainya berbeda dari pengaturan global di atas (4 spasi).
+    // Misalnya, jika Anda ingin React menggunakan 2 spasi:
+    // "editor.tabSize": 3,
+    // "editor.insertSpaces": true
+  },
+  // Pengaturan untuk TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Pengaturan untuk TypeScript React (TSX)
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Pengaturan untuk PHP (Pastikan ekstensi PHP formatter terinstal)
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" // Contoh formatter PHP
+  },
+  // Asosiasi file untuk Blade (Laravel) agar dikenali sebagai HTML
+  "files.associations": {
+    "*.blade.php": "html"
+  },
+
+  // =================================================================
+  // PENGATURAN LAIN-LAIN (Other Editor Settings)
+  // =================================================================
+  "editor.stickyScroll.enabled": false, // Sesuai preferensi
+  "terminal.integrated.fontSize": 14,
+  "explorer.compactFolders": false, // Membuat folder tidak menyatu
+  "editor.minimap.enabled": false, // Nonaktifkan minimap jika tidak suka
+  "tabnine.experimentalAutoImports": true, // Ekstensi TabNine
+
+  // =================================================================
+  // PENGATURAN INDENT-RAINBOW
+  // =================================================================
+  // Menggunakan mode "light" untuk garis vertikal, seperti yang dijelaskan ekstensi
+  "indentRainbow.indicatorStyle": "light",
+  // Lebar garis untuk mode "light" (opsional, sesuaikan sesuai selera)
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  "indentRainbow.colors": [
+    // Warna untuk level 1, 2, 3, dst (disesuaikan dengan deskripsi ekstensi)
+    "rgba(255,255,64,0.3)", // Kuning
+    "rgba(127,255,127,0.3)", // Hijau
+    "rgba(255,127,255,0.3)", // Magenta
+    "rgba(79,236,236,0.3)" // Cyan (contoh tambahan dari deskripsi)
+  ],
+  // Warna untuk indentasi yang tidak sesuai dengan "tabSize"
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)", // Merah bata
+  // Warna untuk campuran spasi dan tab (opsional, jika Anda ingin menyorot ini secara khusus)
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)", // Merah keunguan
+  // Hanya mewarnai area spasi/tab indentasi, bukan di bawah teks
+  "indentRainbow.colorOnWhiteSpaceOnly": true,
+  // Bahasa di mana Indent-Rainbow harus aktif (kosong berarti semua, atau spesifik)
+  "indentRainbow.includedLanguages": [],
+  // Bahasa di mana Indent-Rainbow tidak boleh aktif
+  "indentRainbow.excludedLanguages": ["plaintext"],
+  // Penundaan pembaruan (sesuaikan jika merasa responsnya lambat/terlalu cepat)
+  "indentRainbow.updateDelay": 100,
+  // Untuk mengabaikan highlight error pada bahasa tertentu (jangan masukkan React/JS di sini jika ingin error ditunjukkan)
+  "indentRainbow.ignoreErrorLanguages": []
+}
